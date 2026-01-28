@@ -1,0 +1,142 @@
+{
+  "identity": {
+    "name": "Obsidian Command Center",
+    "archetype": "Jewel & Luxury (Performance Variant)",
+    "description": "A high-density, high-performance environment for social media professionals. It balances the 'Jewel' tones of social media content with the 'Obsidian' utility of a command terminal.",
+    "principles": [
+      "Fusion: Bloomberg Terminal meets Instagram.",
+      "Emotion: Control amidst chaos.",
+      "Content is King: The media (images/videos) pops against the dark background.",
+      "Zoom In: High density data, but clear focus states."
+    ]
+  },
+  "typography": {
+    "headings": {
+      "family": "Manrope, sans-serif",
+      "weights": ["600", "800"],
+      "usage": "Use for all page titles, widget headers, and metrics. Tracking tight (-0.02em)."
+    },
+    "body": {
+      "family": "Inter, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use for all interface text, messages, and inputs."
+    },
+    "mono": {
+      "family": "JetBrains Mono, monospace",
+      "usage": "Use for timestamps, IDs, and analytics data points."
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#09090B",
+      "foreground": "#FAFAFA",
+      "card": "#18181B",
+      "card_foreground": "#FAFAFA",
+      "popover": "#09090B",
+      "popover_foreground": "#FAFAFA",
+      "primary": "#6366F1",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#27272A",
+      "secondary_foreground": "#FAFAFA",
+      "muted": "#27272A",
+      "muted_foreground": "#A1A1AA",
+      "accent": "#27272A",
+      "accent_foreground": "#FAFAFA",
+      "destructive": "#EF4444",
+      "destructive_foreground": "#FAFAFA",
+      "border": "#27272A",
+      "input": "#27272A",
+      "ring": "#6366F1"
+    },
+    "social_brands": {
+      "facebook": "#1877F2",
+      "instagram": "#E4405F",
+      "linkedin": "#0A66C2"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, rgba(9, 9, 11, 0) 70%)",
+      "glass_surface": "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)"
+    }
+  },
+  "spacing": {
+    "scale": "Tailwind Default",
+    "strategy": "Generous padding (p-6, p-8) for containers, tight gaps (gap-2, gap-4) for data grids.",
+    "radius": "0.75rem"
+  },
+  "layout": {
+    "grid_system": "Bento Grid (Mode B: High Density)",
+    "container_width": "max-w-7xl",
+    "sidebar_width": "w-64",
+    "z_index": {
+      "toast": 100,
+      "modal": 50,
+      "dropdown": 40,
+      "sticky_nav": 30
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp corners or slight radius (rounded-md). High contrast hover states.",
+      "primary": "bg-primary hover:bg-primary/90 text-white shadow-[0_0_15px_rgba(99,102,241,0.5)]",
+      "secondary": "bg-secondary hover:bg-secondary/80 text-white border border-white/10"
+    },
+    "cards": {
+      "style": "Flat dark surface with 1px border. No heavy drop shadows.",
+      "base": "bg-card border border-border rounded-xl",
+      "hover": "hover:border-primary/50 transition-colors duration-300"
+    },
+    "inputs": {
+      "style": "Deep background, light border.",
+      "base": "bg-input/50 border-input focus:border-primary focus:ring-1 focus:ring-primary"
+    },
+    "glass_panels": {
+      "style": "Use for sticky headers and floating action bars.",
+      "classes": "bg-background/70 backdrop-blur-xl border-b border-white/5"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Subtle noise overlay on the main background to prevent banding.",
+    "borders": "1px solid borders with 10% opacity white.",
+    "shadows": "Glows instead of shadows. Use colored drop-shadows for primary actions."
+  },
+  "motion": {
+    "library": "framer-motion",
+    "transitions": {
+      "default": { "duration": 0.2, "ease": "easeOut" },
+      "page": { "duration": 0.4, "ease": "easeInOut" }
+    },
+    "micro_interactions": "Buttons scale down slightly (0.98) on click. Links have a sliding underline."
+  },
+  "media": {
+    "image_urls": {
+      "hero_abstract": "https://images.unsplash.com/photo-1737505599162-d9932323a889?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "hero_abstract_alt": "https://images.unsplash.com/photo-1760274479255-b8bf81991ef2?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "user_avatar_1": "https://images.unsplash.com/photo-1675526607070-f5cbd71dde92?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "user_avatar_2": "https://images.unsplash.com/photo-1707190979488-ba1f00c106c7?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "team_collaboration": "https://images.unsplash.com/photo-1758873268663-5a362616b5a7?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "icons": "Lucide React (Default). Use @phosphor-icons/react for more 'weight' if needed."
+  },
+  "accessibility": {
+    "contrast": "Ensure text is WCAG AA compliant. Use lighter grays (Zinc-400) for secondary text, never dark gray on black.",
+    "focus_states": "Visible ring-2 ring-primary ring-offset-2 ring-offset-background.",
+    "reduced_motion": "Respect prefers-reduced-motion media query."
+  },
+  "instructions_to_main_agent": [
+    "1. THEME SETUP: Update tailwind.config.js with the 'Obsidian' color palette defined above. Ensure 'dark' class is applied by default or via system preference.",
+    "2. FONT SETUP: Import Manrope and Inter from Google Fonts in index.css.",
+    "3. LAYOUT: Build the Dashboard using the 'Bento Grid' strategy. Avoid equal-width columns. Use col-span-2 for main content, col-span-1 for sidebars.",
+    "4. COMPONENTS: Customize Shadcn components to match the 'Jewel & Luxury' aesthetic. Remove default heavy shadows, replace with borders and glows.",
+    "5. GLASSMORPHISM: Apply the 'glass_panels' classes to the Unified Inbox header and the Sidebar navigation.",
+    "6. AI FEATURES: When displaying AI suggestions, use a distinct visual container (e.g., a border with a gradient or a subtle 'sparkle' icon) to differentiate from human text.",
+    "7. SOCIAL INTEGRATION: Use the specific brand colors (FB/Insta/LinkedIn) ONLY for their respective icons or tags. Do not color the entire card.",
+    "8. TESTING: Add data-testid to all interactive elements (buttons, inputs, cards)."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop': Do not use generic centered layouts or default Shadcn styling without customization.",
+    "Dark Mode First: Design for dark mode primarily. Light mode should be high-contrast 'Paper' style.",
+    "Micro-Animations: Every hover needs a reaction. Use Framer Motion for smooth layout changes.",
+    "No Emoji Icons: Use Lucide icons instead of emojis for UI elements.",
+    "Toast Notifications: Use 'sonner' for all notifications."
+  ]
+}
